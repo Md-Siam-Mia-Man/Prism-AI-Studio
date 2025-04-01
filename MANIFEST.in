@@ -1,0 +1,8 @@
+include assets/*
+include inputs/*
+include scripts/*.py
+include realesrgan_logic.py
+include app.py
+include VERSION
+include requirements.txt
+include weights/README.md

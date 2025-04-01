@@ -1,0 +1,1603 @@
+/* --- Global Styles & Variables (Default: Vibrant Glassmorphism) --- */
+:root {
+     --font-family: 'Poppins', sans-serif;
+     --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     /* Vibrant Purple/Blue */
+     --glass-bg: rgba(255, 255, 255, 0.1);
+     --glass-border: rgba(255, 255, 255, 0.18);
+     --glass-shadow: rgba(0, 0, 0, 0.1);
+     --blur-amount: 10px;
+     /* Slightly increased blur */
+     --border-radius-medium: 12px;
+     --border-radius-large: 16px;
+
+     --primary-accent: #3498db;
+     /* Purple */
+     --secondary-accent: #3498db;
+     /* Blue */
+     --highlight-glow: rgba(52, 152, 219, 0.5);
+     /* Subtle blue glow */
+     --success-color: #2ecc71;
+     --error-color: #e74c3c;
+     --warning-color: #f39c12;
+     --info-color: #3498db;
+     --download-color: #9b59b6;
+     /* Purple for download status */
+
+     --text-primary: #ffffff;
+     --text-secondary: rgba(255, 255, 255, 0.85);
+     /* Slightly brighter secondary text */
+     --text-muted: rgba(255, 255, 255, 0.65);
+     --icon-color: var(--text-secondary);
+
+     --control-bg: rgba(255, 255, 255, 0.15);
+     --control-bg-hover: rgba(255, 255, 255, 0.25);
+     --control-border: rgba(255, 255, 255, 0.2);
+     --control-selected-bg: var(--secondary-accent);
+     --control-selected-text: #ffffff;
+     --control-disabled-opacity: 0.5;
+
+     --slider-track-bg: rgba(0, 0, 0, 0.2);
+     --slider-fill-bg: var(--secondary-accent);
+     --slider-thumb-bg: #ffffff;
+     --slider-thumb-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+     --scrollbar-thumb: rgba(255, 255, 255, 0.3);
+     --scrollbar-track: rgba(0, 0, 0, 0.1);
+
+     --transition-speed: 0.3s;
+     --transition-bounce: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+     /* Bounce effect */
+}
+
+/* --- Pastel Dream Theme --- */
+body[data-theme="pastel"] {
+     --bg-gradient: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+     /* Pastel Orange/Yellow */
+     --primary-accent: #fda085;
+     /* Pastel Orange */
+     --secondary-accent: #f6d365;
+     /* Pastel Yellow */
+     --highlight-glow: rgba(253, 160, 133, 0.4);
+     /* Subtle orange glow */
+     --glass-bg: rgba(255, 255, 255, 0.3);
+     --glass-border: rgba(255, 255, 255, 0.5);
+     --text-primary: #555;
+     /* Darker text for light background */
+     --text-secondary: rgba(85, 85, 85, 0.8);
+     --text-muted: rgba(85, 85, 85, 0.6);
+     --icon-color: var(--text-secondary);
+     --control-bg: rgba(255, 255, 255, 0.4);
+     --control-bg-hover: rgba(255, 255, 255, 0.6);
+     --control-border: rgba(255, 255, 255, 0.6);
+     --control-selected-bg: var(--primary-accent);
+     --control-selected-text: #ffffff;
+     --slider-track-bg: rgba(85, 85, 85, 0.15);
+     --slider-fill-bg: var(--secondary-accent);
+     --slider-thumb-bg: #ffffff;
+     --slider-thumb-shadow: 0 2px 5px rgba(85, 85, 85, 0.15);
+     --scrollbar-thumb: rgba(85, 85, 85, 0.3);
+     --scrollbar-track: rgba(85, 85, 85, 0.1);
+}
+
+/* --- Ocean Breeze Theme --- */
+body[data-theme="ocean"] {
+     --bg-gradient: linear-gradient(135deg, #2E3192 0%, #1BFFFF 100%);
+     /* Deep Blue to Cyan */
+     --primary-accent: #1BFFFF;
+     /* Cyan */
+     --secondary-accent: #2E3192;
+     /* Deep Blue */
+     --highlight-glow: rgba(27, 255, 255, 0.4);
+     /* Cyan glow */
+     /* Keep most defaults from Vibrant, adjust accents */
+     --control-selected-bg: var(--primary-accent);
+     --control-selected-text: #003366;
+     /* Dark text on bright cyan */
+     --slider-fill-bg: var(--primary-accent);
+}
+
+/* --- Sunset Glow Theme --- */
+body[data-theme="sunset"] {
+     --bg-gradient: linear-gradient(135deg, #FF9A8B 0%, #FF6A88 50%, #FF99AC 100%);
+     /* Pink/Orange gradient */
+     --primary-accent: #FF6A88;
+     /* Pink */
+     --secondary-accent: #FF9A8B;
+     /* Orange/Peach */
+     --highlight-glow: rgba(255, 106, 136, 0.4);
+     /* Pink glow */
+     --text-primary: #444;
+     /* Darker text for lighter bg */
+     --text-secondary: rgba(0, 0, 0, 0.7);
+     --text-muted: rgba(0, 0, 0, 0.5);
+     --icon-color: var(--text-secondary);
+     --glass-bg: rgba(255, 255, 255, 0.25);
+     --glass-border: rgba(255, 255, 255, 0.4);
+     --control-bg: rgba(255, 255, 255, 0.3);
+     --control-bg-hover: rgba(255, 255, 255, 0.5);
+     --control-border: rgba(255, 255, 255, 0.5);
+     --control-selected-bg: var(--primary-accent);
+     --control-selected-text: #ffffff;
+     --slider-track-bg: rgba(68, 68, 68, 0.15);
+     --slider-fill-bg: var(--secondary-accent);
+     --slider-thumb-bg: #ffffff;
+     --slider-thumb-shadow: 0 2px 5px rgba(68, 68, 68, 0.15);
+     --scrollbar-thumb: rgba(0, 0, 0, 0.3);
+     --scrollbar-track: rgba(0, 0, 0, 0.1);
+}
+
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+/* Basic focus visibility */
+*:focus-visible {
+     outline: 2px solid var(--highlight-glow);
+     outline-offset: 2px;
+     box-shadow: 0 0 0 4px rgba(var(--highlight-glow), 0.5);
+     /* More prominent glow */
+}
+
+
+html,
+body {
+     height: 100%;
+     overflow: hidden;
+     /* Prevent body scroll, manage within containers */
+}
+
+body {
+     font-family: var(--font-family);
+     background: var(--bg-gradient);
+     color: var(--text-primary);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 15px;
+     /* Add padding around the whole app */
+     transition: background 1s ease;
+     /* Slower background transition */
+}
+
+/* --- Scrollbar Styling --- */
+::-webkit-scrollbar {
+     width: 8px;
+     height: 8px;
+}
+
+::-webkit-scrollbar-track {
+     background: var(--scrollbar-track);
+     border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+     background-color: var(--scrollbar-thumb);
+     border-radius: 10px;
+     border: 2px solid transparent;
+     /* Creates padding around thumb */
+     background-clip: content-box;
+     transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+     background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- Glassmorphism Effect --- */
+.glass {
+     background: var(--glass-bg);
+     backdrop-filter: blur(var(--blur-amount));
+     -webkit-backdrop-filter: blur(var(--blur-amount));
+     /* Safari */
+     border-radius: var(--border-radius-large);
+     border: 1px solid var(--glass-border);
+     box-shadow: 0 4px 25px var(--glass-shadow);
+     /* Slightly stronger shadow */
+     transition: background var(--transition-speed) ease, border var(--transition-speed) ease, backdrop-filter var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+/* --- Main Layout --- */
+.app-wrapper {
+     width: 100%;
+     height: 100%;
+     max-width: 1800px;
+     /* Max width for large screens */
+     max-height: 95vh;
+     /* Limit height */
+     display: flex;
+     overflow: hidden;
+     /* Contained scroll */
+     border-radius: var(--border-radius-large);
+     /* Match glass effect */
+     box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.4);
+     /* Deeper outer shadow */
+}
+
+.container {
+     /* Renamed original container to avoid conflict */
+     display: flex;
+     width: 100%;
+     height: 100%;
+}
+
+.sidebar {
+     width: 380px;
+     flex-shrink: 0;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     overflow-y: auto;
+     /* Enable scroll only for sidebar */
+     height: 100%;
+     background: rgba(0, 0, 0, 0.1);
+     /* Slightly darker sidebar bg */
+     border-right: 1px solid var(--glass-border);
+     /* Add subtle separator */
+}
+
+.main-content {
+     flex-grow: 1;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     overflow-y: auto;
+     /* Enable scroll for main content */
+     height: 100%;
+}
+
+/* --- Sidebar Sections --- */
+.app-info,
+.controls-container {
+     padding: 20px;
+}
+
+/* --- MOVED Theme Switcher to top --- */
+.top-controls {
+     display: flex;
+     justify-content: space-between;
+     /* Align items */
+     align-items: center;
+     margin-bottom: 15px;
+     gap: 15px;
+     padding: 10px 20px;
+     /* Add padding */
+     position: relative;
+     /* Needed for z-index context */
+     z-index: 5;
+     /* Ensure it's above app-info if overlapping */
+}
+
+.theme-switcher {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     font-size: 0.85em;
+     color: var(--text-muted);
+}
+
+.theme-switcher label {
+     color: var(--text-secondary);
+     font-weight: 500;
+}
+
+
+.app-info h1 {
+     font-size: 1.8em;
+     font-weight: 600;
+     margin-bottom: 5px;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     color: var(--text-primary);
+}
+
+.app-info h1 .fa-gem {
+     color: var(--primary-accent);
+     /* Accent color for gem */
+     filter: drop-shadow(0 0 8px var(--highlight-glow));
+     /* Slightly larger glow */
+     animation: pulse-glow 3s infinite ease-in-out;
+     /* Add subtle pulse */
+}
+
+@keyframes pulse-glow {
+
+     0%,
+     100% {
+          filter: drop-shadow(0 0 5px var(--highlight-glow));
+     }
+
+     50% {
+          filter: drop-shadow(0 0 10px var(--highlight-glow));
+     }
+}
+
+
+.app-info .subtitle {
+     font-size: 0.9em;
+     color: var(--text-secondary);
+     margin-bottom: 15px;
+}
+
+.header-controls {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     /* Reduced gap */
+     font-size: 0.85em;
+     color: var(--text-muted);
+}
+
+/* Removed theme switcher styles from here */
+
+.gpu-info {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+}
+
+.gpu-info .label {
+     font-weight: 500;
+     color: var(--text-secondary);
+}
+
+.gpu-info i {
+     margin-right: 4px;
+     color: var(--icon-color);
+     transition: color var(--transition-speed) ease;
+}
+
+body[data-theme="ocean"] .gpu-info i {
+     color: var(--primary-accent);
+}
+
+/* Example theme icon color */
+
+
+/* --- Controls --- */
+.controls-container {
+     display: flex;
+     flex-direction: column;
+     gap: 25px;
+}
+
+.control-grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     /* Single column layout */
+     gap: 20px;
+}
+
+.control-group {
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+}
+
+.control-group label:not(.checkbox-label):not(.button-group-label),
+.button-group-label {
+     font-weight: 500;
+     font-size: 0.9em;
+     color: var(--text-secondary);
+     display: flex;
+     align-items: center;
+     gap: 6px;
+}
+
+.control-group label i,
+.button-group-label i {
+     color: var(--icon-color);
+     font-size: 1.1em;
+     /* Slightly larger icons */
+     transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.control-group:hover label i,
+.control-group:hover .button-group-label i {
+     transform: scale(1.1);
+     /* Slight scale on hover */
+}
+
+
+.control-group small {
+     font-size: 0.75em;
+     color: var(--text-muted);
+     line-height: 1.3;
+}
+
+/* Model Status Text Styling */
+.model-status-text {
+     font-size: 0.8em;
+     font-weight: 500;
+     padding: 3px 6px;
+     border-radius: 4px;
+     display: inline-block;
+     /* To allow padding */
+     margin-top: 4px;
+     /* Space from select/button */
+     transition: all var(--transition-speed) ease;
+     opacity: 0.9;
+}
+
+.model-status-text.checking {
+     color: var(--info-color);
+     background-color: rgba(52, 152, 219, 0.1);
+     animation: pulse-bg 1.5s infinite ease-in-out alternate;
+}
+
+.model-status-text.available {
+     color: var(--success-color);
+     background-color: rgba(46, 204, 113, 0.1);
+}
+
+.model-status-text.unavailable,
+.model-status-text.error {
+     color: var(--error-color);
+     background-color: rgba(231, 76, 60, 0.1);
+}
+
+@keyframes pulse-bg {
+     from {
+          background-color: rgba(var(--glass-bg), 0.1);
+     }
+
+     to {
+          background-color: rgba(var(--info-color), 0.2);
+     }
+}
+
+
+/* Download Buttons (Small) */
+.small-btn {
+     align-self: flex-start;
+     /* Don't stretch full width */
+     display: inline-flex;
+     /* Align icon and text */
+     align-items: center;
+     gap: 6px;
+     padding: 5px 10px;
+     font-size: 0.8em;
+     background-color: var(--control-bg);
+     color: var(--text-secondary);
+     border: 1px solid var(--control-border);
+     border-radius: var(--border-radius-medium);
+     cursor: pointer;
+     transition: all var(--transition-speed) ease;
+}
+
+.small-btn:hover:not(:disabled) {
+     background-color: var(--control-bg-hover);
+     color: var(--text-primary);
+     transform: translateY(-1px);
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.small-btn:disabled {
+     opacity: var(--control-disabled-opacity);
+     cursor: not-allowed;
+}
+
+.small-btn i {
+     font-size: 0.9em;
+}
+
+
+/* --- Custom Select Dropdown --- */
+.custom-select {
+     position: relative;
+     /* Crucial for absolute positioning of options */
+     width: 100%;
+     color: var(--text-primary);
+     /* Adjusted sizing in theme-switcher rule */
+}
+
+/* Specific width adjustment for theme switcher select */
+.theme-switcher .custom-select {
+     min-width: 150px;
+     /* Give it a minimum width */
+     flex-grow: 0;
+     /* Don't let it grow excessively */
+}
+
+
+.select-selected {
+     background-color: var(--control-bg);
+     border: 1px solid var(--control-border);
+     border-radius: var(--border-radius-medium);
+     padding: 10px 15px;
+     cursor: pointer;
+     user-select: none;
+     transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     white-space: nowrap;
+     /* Prevent text wrapping */
+     overflow: hidden;
+     /* Hide overflow */
+     text-overflow: ellipsis;
+     /* Add ellipsis if text too long */
+}
+
+.custom-select:not(.disabled) .select-selected:hover {
+     background-color: var(--control-bg-hover);
+     border-color: var(--control-border);
+     box-shadow: 0 0 8px var(--highlight-glow);
+     /* Glow on hover */
+}
+
+.custom-select.disabled .select-selected {
+     opacity: var(--control-disabled-opacity);
+     cursor: not-allowed;
+}
+
+.select-selected::after {
+     /* Dropdown arrow */
+     content: '\f078';
+     /* Font Awesome caret down */
+     font-family: 'Font Awesome 6 Free';
+     font-weight: 900;
+     margin-left: 10px;
+     transition: transform var(--transition-speed) ease;
+}
+
+.custom-select.open .select-selected::after {
+     transform: rotate(180deg);
+}
+
+.select-options {
+     position: absolute;
+     /* Position relative to .custom-select */
+     top: calc(100% + 5px);
+     left: 0;
+     right: 0;
+     background: var(--glass-bg);
+     backdrop-filter: blur(var(--blur-amount));
+     -webkit-backdrop-filter: blur(var(--blur-amount));
+     border: 1px solid var(--glass-border);
+     border-radius: var(--border-radius-medium);
+     max-height: 200px;
+     overflow-y: auto;
+     z-index: 100;
+     /* Ensure it's above other controls */
+     opacity: 0;
+     visibility: hidden;
+     transform: translateY(-10px) scaleY(0.95);
+     /* Add scale effect */
+     transform-origin: top center;
+     transition: opacity var(--transition-speed) ease,
+          visibility var(--transition-speed) ease,
+          transform var(--transition-speed) ease;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+     /* Stronger shadow for dropdown */
+}
+
+.custom-select.open .select-options {
+     opacity: 1;
+     visibility: visible;
+     transform: translateY(0) scaleY(1);
+}
+
+.select-option {
+     padding: 10px 15px;
+     cursor: pointer;
+     transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+     color: var(--text-secondary);
+     white-space: nowrap;
+     /* Prevent text wrapping */
+     overflow: hidden;
+     /* Hide overflow */
+     text-overflow: ellipsis;
+     /* Add ellipsis if text too long */
+}
+
+.select-option:hover,
+.select-option.selected {
+     background-color: var(--control-bg-hover);
+     color: var(--text-primary);
+}
+
+
+/* --- Button Group --- */
+.button-group {
+     display: grid;
+     /* Use grid for equal columns */
+     gap: 5px;
+     width: 100%;
+}
+
+.button-group button {
+     padding: 8px 5px;
+     /* Adjust padding */
+     font-size: 0.85em;
+     text-align: center;
+     background-color: var(--control-bg);
+     color: var(--text-secondary);
+     border: 1px solid var(--control-border);
+     border-radius: var(--border-radius-medium);
+     cursor: pointer;
+     transition: all var(--transition-speed) ease;
+     font-weight: 500;
+}
+
+.button-group.disabled button {
+     opacity: var(--control-disabled-opacity);
+     cursor: not-allowed;
+     background-color: rgba(0, 0, 0, 0.1);
+     /* Darker disabled */
+     box-shadow: none;
+     transform: none;
+}
+
+.button-group button:hover:not(:disabled):not(.selected) {
+     background-color: var(--control-bg-hover);
+     color: var(--text-primary);
+     border-color: var(--control-border);
+     transform: translateY(-1px);
+     /* Subtle lift */
+}
+
+.button-group button.selected {
+     background-color: var(--control-selected-bg);
+     color: var(--control-selected-text);
+     border-color: transparent;
+     /* Selected has no border */
+     font-weight: 600;
+     box-shadow: 0 0 12px var(--highlight-glow), 0 2px 5px rgba(0, 0, 0, 0.2);
+     /* Enhanced glow + shadow */
+     transform: scale(1.02);
+     /* Slightly larger when selected */
+}
+
+.button-group button:disabled:not(.selected) {
+     /* Specifically target non-selected disabled buttons */
+     opacity: var(--control-disabled-opacity);
+     cursor: not-allowed;
+     background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- Custom Slider --- */
+.custom-slider {
+     position: relative;
+     width: 100%;
+     height: 24px;
+     /* Increased height for easier interaction */
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+     padding: 8px 0;
+     /* Vertical padding */
+}
+
+.slider-track {
+     position: absolute;
+     left: 0;
+     right: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     height: 6px;
+     background-color: var(--slider-track-bg);
+     border-radius: 3px;
+     width: 100%;
+     overflow: hidden;
+     /* Keep fill contained */
+}
+
+.slider-fill {
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     background-color: var(--slider-fill-bg);
+     border-radius: 3px;
+     transition: width var(--transition-speed) ease;
+     /* Smooth fill transition */
+}
+
+.slider-thumb {
+     position: absolute;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     /* Center thumb on track */
+     width: 18px;
+     height: 18px;
+     background-color: var(--slider-thumb-bg);
+     border-radius: 50%;
+     box-shadow: var(--slider-thumb-shadow);
+     z-index: 2;
+     transition: box-shadow var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.custom-slider:hover .slider-thumb {
+     box-shadow: 0 0 0 6px var(--highlight-glow);
+     /* Glow effect on hover */
+     transform: translate(-50%, -50%) scale(1.1);
+     /* Slightly larger thumb */
+}
+
+.custom-slider.dragging .slider-thumb {
+     box-shadow: 0 0 0 8px var(--highlight-glow);
+     /* Larger glow while dragging */
+     transform: translate(-50%, -50%) scale(1.2);
+     /* Even larger thumb */
+}
+
+.slider-value-display {
+     font-weight: 500;
+     color: var(--text-primary);
+}
+
+/* --- Advanced Controls --- */
+.advanced-controls-container {
+     margin-top: 10px;
+     /* Space above toggle */
+     border-top: 1px solid var(--glass-border);
+     /* Separator line */
+     padding-top: 20px;
+}
+
+.advanced-controls-toggle {
+     margin-bottom: 15px;
+}
+
+.toggle-btn {
+     background: none;
+     border: none;
+     color: var(--text-secondary);
+     font-size: 0.9em;
+     font-weight: 500;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     padding: 5px;
+     transition: color var(--transition-speed) ease;
+}
+
+.toggle-btn:hover {
+     color: var(--text-primary);
+}
+
+.toggle-btn i {
+     transition: transform var(--transition-speed) ease;
+}
+
+#advanced-options {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 20px;
+     overflow: hidden;
+     max-height: 1000px;
+     /* Allow space to expand */
+     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out, gap 0.5s ease-in-out;
+     /* Added gap transition */
+     opacity: 1;
+}
+
+#advanced-options.hidden {
+     max-height: 0;
+     opacity: 0;
+     margin-top: -15px;
+     /* Pull up slightly when hidden */
+     /* No gap needed when hidden */
+     gap: 0;
+     /* Prevent interaction when hidden */
+     visibility: hidden;
+}
+
+/* --- Checkbox Styling --- */
+.checkbox-item {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+
+.checkbox-label {
+     display: flex;
+     align-items: center;
+     gap: 6px;
+     cursor: pointer;
+     font-size: 0.9em;
+     color: var(--text-secondary);
+     transition: color var(--transition-speed) ease;
+}
+
+.checkbox-label:hover {
+     color: var(--text-primary);
+}
+
+.checkbox-label i {
+     color: var(--icon-color);
+     font-size: 1.1em;
+     transition: color var(--transition-speed) ease;
+}
+
+.checkbox-item input[type="checkbox"] {
+     appearance: none;
+     /* Remove default */
+     width: 18px;
+     height: 18px;
+     border: 1px solid var(--control-border);
+     border-radius: 4px;
+     cursor: pointer;
+     position: relative;
+     background-color: var(--control-bg);
+     transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.checkbox-item input[type="checkbox"]::before {
+     content: "\f00c";
+     /* Font Awesome check */
+     font-family: "Font Awesome 6 Free";
+     font-weight: 900;
+     font-size: 12px;
+     color: var(--control-selected-text);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%) scale(0);
+     /* Hidden by default */
+     transition: transform 0.2s ease-in-out;
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+     background-color: var(--primary-accent);
+     border-color: var(--primary-accent);
+}
+
+.checkbox-item input[type="checkbox"]:checked::before {
+     transform: translate(-50%, -50%) scale(1);
+     /* Show check */
+}
+
+.checkbox-item input[type="checkbox"]:disabled {
+     cursor: not-allowed;
+     opacity: var(--control-disabled-opacity);
+}
+
+.checkbox-item input[type="checkbox"]:disabled+.checkbox-label {
+     opacity: var(--control-disabled-opacity);
+     cursor: not-allowed;
+}
+
+.checkbox-item small {
+     margin-left: auto;
+     /* Push to the right */
+     font-size: 0.75em;
+}
+
+
+/* --- Action Buttons (Bottom of Sidebar) --- */
+.sidebar-action-buttons {
+     margin-top: auto;
+     /* Push to bottom */
+     padding-top: 20px;
+     /* Space above */
+     border-top: 1px solid var(--glass-border);
+     display: grid;
+     grid-template-columns: 1fr;
+     /* Stack buttons */
+     gap: 15px;
+}
+
+.action-btn {
+     padding: 12px 20px;
+     font-size: 1em;
+     font-weight: 600;
+     border: none;
+     border-radius: var(--border-radius-medium);
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     transition: all var(--transition-speed) ease;
+     color: var(--control-selected-text);
+     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+     /* Base shadow */
+}
+
+.action-btn i {
+     font-size: 1.1em;
+}
+
+.action-btn.enhance {
+     background-color: var(--primary-accent);
+     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn.clear {
+     background-color: var(--error-color);
+     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn.download {
+     background-color: var(--success-color);
+     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn:hover:not(:disabled) {
+     filter: brightness(1.15);
+     /* Slightly more brightness */
+     transform: translateY(-3px);
+     /* Lift higher */
+     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+     /* Stronger shadow */
+}
+
+.action-btn:active:not(:disabled) {
+     filter: brightness(0.9);
+     transform: translateY(0);
+     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+     /* Inset shadow on click */
+}
+
+.action-btn:disabled {
+     opacity: var(--control-disabled-opacity);
+     cursor: not-allowed;
+     background-color: rgba(0, 0, 0, 0.2);
+     color: var(--text-muted);
+     box-shadow: none;
+     transform: none;
+}
+
+
+/* --- Main Content Area --- */
+.file-drop-area {
+     padding: 60px 30px;
+     /* Increased padding */
+     text-align: center;
+     border: 2px dashed var(--glass-border);
+     cursor: pointer;
+     transition: all var(--transition-speed) ease;
+     min-height: 250px;
+     /* Increased min-height */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.file-drop-area:hover,
+.file-drop-area.dragover {
+     background: rgba(255, 255, 255, 0.15);
+     border-color: var(--secondary-accent);
+     box-shadow: inset 0 0 20px rgba(var(--secondary-accent), 0.3);
+     /* Inner glow */
+     transform: scale(1.01);
+     /* Slight scale */
+}
+
+.file-drop-area p {
+     font-size: 1.1em;
+     color: var(--text-secondary);
+     line-height: 1.6;
+}
+
+.file-drop-area i.fa-upload {
+     font-size: 3em;
+     /* Larger icon */
+     margin-bottom: 20px;
+     color: var(--primary-accent);
+     display: block;
+     /* Make icon block level */
+     transition: transform 0.3s ease;
+}
+
+.file-drop-area:hover i.fa-upload,
+.file-drop-area.dragover i.fa-upload {
+     transform: scale(1.1) translateY(-5px);
+     /* Icon bounce */
+}
+
+#fileElem {
+     /* Hide the actual file input */
+     display: none;
+}
+
+/* Previews Layout */
+.previews-wrapper {
+     display: flex;
+     /* Side-by-side layout */
+     gap: 20px;
+     flex-grow: 1;
+     /* Take remaining space */
+     min-height: 0;
+     /* Allow flex items to shrink properly */
+}
+
+.previews-section {
+     flex: 1;
+     /* Each section takes half the space */
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     min-width: 0;
+     /* Allow flex items to shrink properly */
+}
+
+.previews-section h2 {
+     font-size: 1.2em;
+     font-weight: 600;
+     margin-bottom: 15px;
+     color: var(--text-secondary);
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     border-bottom: 1px solid var(--glass-border);
+     /* Add separator line */
+     padding-bottom: 10px;
+}
+
+.previews-section h2 i {
+     color: var(--icon-color);
+}
+
+.preview-list {
+     flex-grow: 1;
+     /* List takes remaining vertical space */
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+     /* Slightly smaller min */
+     gap: 15px;
+     overflow-y: auto;
+     /* Scroll within the list */
+     padding: 5px;
+     /* Padding for scrollbar */
+     align-content: start;
+     /* Align items to the top */
+}
+
+/* Thumbnail Styling */
+.preview-thumbnail {
+     position: relative;
+     aspect-ratio: 1 / 1;
+     /* Square thumbnails */
+     border-radius: var(--border-radius-medium);
+     overflow: hidden;
+     background-color: rgba(0, 0, 0, 0.2);
+     /* Placeholder bg */
+     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.preview-thumbnail:hover {
+     transform: scale(1.05) rotate(1deg);
+     /* Larger scale and slight rotate */
+     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+     z-index: 10;
+     /* Bring to front on hover */
+}
+
+.preview-thumbnail img {
+     display: block;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     /* Scale image nicely */
+     transition: filter 0.3s ease;
+}
+
+.preview-thumbnail:hover img {
+     filter: brightness(1.1);
+     /* Slightly brighten image on hover */
+}
+
+/* Thumbnail Action Buttons (Remove/Download) */
+.thumbnail-action-btn {
+     position: absolute;
+     top: 5px;
+     right: 5px;
+     width: 28px;
+     height: 28px;
+     background-color: rgba(0, 0, 0, 0.5);
+     border: none;
+     border-radius: 50%;
+     color: white;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 0.9em;
+     opacity: 0;
+     /* Hidden by default */
+     transition: opacity var(--transition-speed) ease, background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+     z-index: 5;
+     transform: scale(0.8);
+     /* Start slightly smaller */
+}
+
+.preview-thumbnail:hover .thumbnail-action-btn {
+     opacity: 1;
+     /* Show on hover */
+     transform: scale(1);
+     /* Scale to full size */
+}
+
+.thumbnail-action-btn:hover {
+     background-color: rgba(0, 0, 0, 0.8);
+     transform: scale(1.1);
+     /* Scale up button on its own hover */
+}
+
+.thumbnail-download-btn {
+     /* Specific style for download */
+     background-color: rgba(46, 204, 113, 0.7);
+     /* Semi-transparent success */
+}
+
+.thumbnail-download-btn:hover {
+     background-color: var(--success-color);
+}
+
+.thumbnail-remove-btn {
+     /* Specific style for remove */
+     background-color: rgba(231, 76, 60, 0.7);
+     /* Semi-transparent error */
+}
+
+.thumbnail-remove-btn:hover {
+     background-color: var(--error-color);
+}
+
+/* Thumbnail Status Overlay */
+.status-overlay {
+     position: absolute;
+     inset: 0;
+     background-color: rgba(0, 0, 0, 0.6);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     color: white;
+     text-align: center;
+     padding: 10px;
+     opacity: 0;
+     transition: opacity var(--transition-speed) ease;
+     z-index: 3;
+     /* Below action buttons */
+     pointer-events: none;
+     /* Don't intercept hover for buttons */
+}
+
+.status-overlay i {
+     font-size: 1.8em;
+     margin-bottom: 8px;
+     display: none;
+     /* Hide all icons by default */
+     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.status-overlay-text {
+     font-size: 0.8em;
+     font-weight: 500;
+}
+
+/* Show overlay and specific icon based on parent class */
+.preview-thumbnail.pending .status-overlay,
+.preview-thumbnail.queued .status-overlay,
+.preview-thumbnail.processing .status-overlay,
+.preview-thumbnail.error .status-overlay,
+.preview-thumbnail.complete .status-overlay {
+     /* 'complete' shows check on input briefly */
+     opacity: 1;
+     pointer-events: auto;
+}
+
+.preview-thumbnail.queued .status-overlay .fa-clock,
+.preview-thumbnail.pending .status-overlay .fa-clock {
+     display: inline-block;
+     color: var(--info-color);
+}
+
+.preview-thumbnail.processing .status-overlay .fa-spinner {
+     display: inline-block;
+     animation: fa-spin 1.5s linear infinite;
+     color: var(--warning-color);
+}
+
+.preview-thumbnail.error .status-overlay .fa-exclamation-triangle {
+     display: inline-block;
+     color: var(--error-color);
+     animation: shake-error 0.5s ease-in-out;
+}
+
+@keyframes shake-error {
+
+     0%,
+     100% {
+          transform: translateX(0);
+     }
+
+     25% {
+          transform: translateX(-5px);
+     }
+
+     50% {
+          transform: translateX(5px);
+     }
+
+     75% {
+          transform: translateX(-3px);
+     }
+}
+
+
+.preview-thumbnail.complete .status-overlay .fa-check {
+     display: inline-block;
+     color: var(--success-color);
+     animation: pop-in 0.3s ease-out;
+}
+
+@keyframes pop-in {
+     0% {
+          transform: scale(0.5);
+          opacity: 0;
+     }
+
+     80% {
+          transform: scale(1.1);
+          opacity: 1;
+     }
+
+     100% {
+          transform: scale(1);
+          opacity: 1;
+     }
+}
+
+
+/* --- Notification Area --- */
+#notification-area {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     z-index: 1000;
+     max-width: 350px;
+     /* Limit width */
+}
+
+.notification {
+     padding: 12px 18px;
+     border-radius: var(--border-radius-medium);
+     display: flex;
+     align-items: flex-start;
+     /* Align icon top */
+     gap: 12px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+     opacity: 0;
+     transform: translateX(20px) scale(0.95);
+     /* Start slightly smaller and off-screen */
+     transform-origin: bottom right;
+     transition: all 0.4s var(--transition-bounce);
+     /* Use bounce */
+     color: var(--text-primary);
+     /* Glass effect for notifications */
+     background: var(--glass-bg);
+     backdrop-filter: blur(var(--blur-amount));
+     -webkit-backdrop-filter: blur(var(--blur-amount));
+     border: 1px solid var(--glass-border);
+}
+
+.notification.show {
+     opacity: 1;
+     transform: translateX(0) scale(1);
+}
+
+.notification i:first-child {
+     /* Target only the main status icon */
+     font-size: 1.3em;
+     margin-top: 2px;
+     /* Align icon slightly better */
+     flex-shrink: 0;
+     /* Prevent icon from shrinking */
+}
+
+.notification-content {
+     flex-grow: 1;
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+     /* Space between message and progress */
+     overflow: hidden;
+     /* Prevent content overflow */
+}
+
+.notification-message {
+     font-size: 0.9em;
+     line-height: 1.4;
+     word-wrap: break-word;
+     /* Wrap long messages */
+}
+
+/* Notification Types */
+.notification.info i:first-child {
+     color: var(--info-color);
+}
+
+.notification.success i:first-child {
+     color: var(--success-color);
+}
+
+.notification.warning i:first-child {
+     color: var(--warning-color);
+}
+
+.notification.error i:first-child {
+     color: var(--error-color);
+}
+
+.notification.download i:first-child {
+     color: var(--download-color);
+}
+
+/* Progress Bar inside Notification */
+.progress-bar {
+     width: 100%;
+     height: 6px;
+     background-color: rgba(0, 0, 0, 0.2);
+     border-radius: 3px;
+     overflow: hidden;
+     margin-top: 5px;
+}
+
+.progress {
+     height: 100%;
+     width: 0%;
+     /* Updated by JS */
+     background-color: var(--info-color);
+     /* Default */
+     border-radius: 3px;
+     transition: width 0.2s linear;
+}
+
+.notification.download .progress,
+.notification.processing .progress {
+     /* Add indeterminate animation */
+     background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+     background-size: 40px 40px;
+     animation: progress-bar-stripes 1s linear infinite;
+}
+
+@keyframes progress-bar-stripes {
+     from {
+          background-position: 40px 0;
+     }
+
+     to {
+          background-position: 0 0;
+     }
+}
+
+.notification.success .progress {
+     background-color: var(--success-color);
+     animation: none;
+     background-image: none;
+}
+
+.notification.error .progress {
+     background-color: var(--error-color);
+     animation: none;
+     background-image: none;
+}
+
+.notification.warning .progress {
+     background-color: var(--warning-color);
+     animation: none;
+     background-image: none;
+}
+
+.notification.download .progress {
+     background-color: var(--download-color);
+}
+
+/* Notification Close Button */
+.notification-close-btn {
+     background: none;
+     border: none;
+     color: inherit;
+     /* Use text color */
+     font-size: 1.5em;
+     line-height: 1;
+     cursor: pointer;
+     padding: 0 0 0 10px;
+     /* Add some left padding */
+     margin-left: auto;
+     /* Push to the right */
+     opacity: 0.7;
+     align-self: flex-start;
+     /* Align top */
+     transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.notification-close-btn:hover {
+     opacity: 1;
+     transform: scale(1.1);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+     .app-wrapper {
+          flex-direction: column;
+          max-height: none;
+          /* Allow full height scroll */
+          height: auto;
+          /* Allow content to dictate height */
+     }
+
+     .sidebar {
+          width: 100%;
+          height: auto;
+          /* Auto height */
+          max-height: 50vh;
+          /* Limit sidebar height */
+          border-bottom: 2px solid var(--glass-border);
+          border-right: none;
+          /* Remove right border */
+          overflow-y: auto;
+          /* Ensure scroll works */
+     }
+
+     .top-controls {
+          /* Adjust top controls layout */
+          flex-wrap: wrap;
+          /* Allow wrapping */
+          padding: 10px 15px;
+     }
+
+     .main-content {
+          height: auto;
+          /* Auto height */
+          min-height: 40vh;
+          /* Ensure some minimum space */
+     }
+
+     .previews-wrapper {
+          flex-direction: column;
+          /* Stack previews */
+          flex-grow: 1;
+          /* Allow wrapper to grow */
+          min-height: 0;
+          /* Required for flex children */
+     }
+
+     .previews-section {
+          min-height: 200px;
+          /* Give preview sections a min height */
+     }
+
+     .preview-list {
+          min-height: 150px;
+          /* Give lists min height */
+     }
+}
+
+@media (max-width: 768px) {
+     .preview-list {
+          grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+          /* Smaller thumbnails */
+     }
+
+     .sidebar {
+          padding: 15px;
+          max-height: 60vh;
+          /* Allow slightly more height */
+     }
+
+     .top-controls {
+          justify-content: center;
+          /* Center items when wrapped */
+     }
+
+     .main-content {
+          padding: 15px;
+     }
+
+     .file-drop-area {
+          padding: 40px 20px;
+          /* Keep reasonable padding */
+          min-height: 200px;
+          /* Adjust min height */
+     }
+
+     .file-drop-area p {
+          font-size: 1em;
+     }
+
+     .file-drop-area i.fa-upload {
+          font-size: 2.5em;
+          margin-bottom: 15px;
+     }
+
+     .app-info h1 {
+          font-size: 1.6em;
+     }
+
+     .theme-switcher label,
+     .gpu-info .label {
+          min-width: 60px;
+          /* Ensure label has some space */
+          flex-shrink: 0;
+     }
+
+     /* Allow selects to take reasonable width */
+     .theme-switcher .custom-select {
+          min-width: 140px;
+     }
+
+     .controls-container .custom-select {
+          max-width: none;
+     }
+
+}
+
+@media (max-width: 480px) {
+     body {
+          padding: 10px;
+     }
+
+     .sidebar {
+          width: 100%;
+          max-height: 65vh;
+          /* More height on small screens */
+          padding: 10px;
+     }
+
+     .main-content {
+          padding: 10px;
+     }
+
+     .top-controls {
+          padding: 5px 10px;
+          gap: 10px;
+     }
+
+     .app-info,
+     .controls-container {
+          padding: 15px;
+     }
+
+     .app-info h1 {
+          font-size: 1.4em;
+     }
+
+     /* .button-group {
+     
+     } */
+     .action-btn {
+          font-size: 0.9em;
+          padding: 10px 15px;
+     }
+
+     .preview-list {
+          grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+          /* Even smaller */
+          gap: 10px;
+     }
+
+     .previews-section h2 {
+          font-size: 1.1em;
+     }
+
+     .notification {
+          max-width: calc(100vw - 40px);
+          /* Ensure notifications fit */
+          bottom: 10px;
+          right: 10px;
+     }
+
+     .file-drop-area {
+          min-height: 180px;
+          padding: 30px 15px;
+     }
+}
