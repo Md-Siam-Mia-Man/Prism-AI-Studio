@@ -1,4 +1,4 @@
-<img src="https://github.com/Md-Siam-Mia-Code/GFPGAN/blob/main/assets/Banner.png"></img>
+<img src="https://github.com/Md-Siam-Mia-Code/Prism-AI-Studio/blob/main/assets/Banner.png"></img>
 
 # ✨ Prism AI Studio ✨ <br> 🪄 Effortless AI Upscaling 🪄
 
