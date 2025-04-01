@@ -98,7 +98,7 @@ python Prism-AI-Studio.py
     python Prism-AI-Studio.py
 
 **Access the Web Interface:**  
-🌐 Open your browser and visit: [http://127.0.0.1:3005](http://127.0.0.1:3005)
+🌐 Open your browser and visit: [http://127.0.0.1:3005](http://127.0.0.1:3025)
 
 *Note: Check the exact versions required by the specific versions of Real-ESRGAN and Prism-AI-Studio you intend to use.*
 
