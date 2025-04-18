@@ -80,7 +80,7 @@ pip install -r requirements.txt
 ### ▶️ Running the Application
 **Start the Flask Server:**
 ```bash
-python Prism-AI-Studio.py
+python prism.py
 ```
 
 **For one-click RUN**
@@ -95,7 +95,7 @@ python Prism-AI-Studio.py
     cd /D path/to/your/Prism-AI-Studio
     
     :: Run the Prism-AI-Studio web interface script
-    python Prism-AI-Studio.py
+    python prism.py
 
 **Access the Web Interface:**  
 🌐 Open your browser and visit: [http://127.0.0.1:3005](http://127.0.0.1:3025)
