@@ -1,4 +1,4 @@
-<img src="https://github.com/Md-Siam-Mia-Code/Prism-AI-Studio/blob/main/assets/Banner.png"></img>
+<img src="https://github.com/Md-Siam-Mia-Man/Prism-AI-Studio/blob/main/assets/Banner.png"></img>
 
 # ✨ Prism AI Studio ✨ <br> 🪄 Effortless AI Upscaling 🪄
 
@@ -6,7 +6,7 @@ Get ready to witness some AI magic! 🚀 Prism AI Studio is a super-sleek, easy-
 
 ---
 
-<img src="https://github.com/Md-Siam-Mia-Code/Prism-AI-Studio/blob/main/assets/Prism-AI-Studio.png"></img>
+<img src="https://github.com/Md-Siam-Mia-Man/Prism-AI-Studio/blob/main/assets/Prism-AI-Studio.png"></img>
 
 ## 🌟 Key Features 🌟
 
@@ -52,7 +52,7 @@ Get ready to launch Prism AI Studio! Follow these steps:
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/Md-Siam-Mia-Code/Prism-AI-Studio.git
+git clone https://github.com/Md-Siam-Mia-Man/Prism-AI-Studio.git
 cd Prism-AI-Studio
 ```
 
